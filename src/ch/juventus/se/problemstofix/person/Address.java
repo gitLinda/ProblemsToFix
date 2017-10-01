@@ -60,15 +60,14 @@ public class Address {
         this.country = country;
     }
 
-    //Solution:
-//    @Override
-//    public String toString() {
-//        return "Address{" +
-//                "street='" + street + '\'' +
-//                ", houseNr=" + houseNr +
-//                ", plz=" + plz +
-//                ", city='" + city + '\'' +
-//                ", country='" + country + '\'' +
-//                '}';
-//    }
+    @Override
+    public String toString() {
+        return "Address{" +
+                "street='" + street + '\'' +
+                ", houseNr=" + houseNr +
+                ", plz=" + plz +
+                ", city='" + city + '\'' +
+                ", country='" + country + '\'' +
+                '}';
+    }
 }

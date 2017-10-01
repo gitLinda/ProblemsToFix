@@ -15,7 +15,7 @@ public class PersonController {
         Iterator<Person> iterator = people.iterator();
         while (iterator.hasNext()) {
             Person person = iterator.next();
-            if(person.getFirstName().equals("Lina")) {
+            if(person.getFirstName().equals("Linda")) {
                 iterator.remove();
             }
         }
@@ -25,23 +25,15 @@ public class PersonController {
     public List<Person> removeAllUnderage (List<Person> people) {
 
         Calendar cal = Calendar.getInstance();
-        Date today = cal.getTime();
         cal.add(Calendar.YEAR, -18);
         Date referenceDate = cal.getTime();
 
-        for(Person person : people) {
-            if(person.getBirthday().after(referenceDate)) {
-                people.remove(person);
+        Iterator<Person> iterator = people.iterator();
+        while (iterator.hasNext()) {
+            if(iterator.next().getBirthday().after(referenceDate)) {
+                iterator.remove();
             }
         }
-
-        // solution:
-//        Iterator<Person> iterator = people.iterator();
-//        while (iterator.hasNext()) {
-//            if(iterator.next().getBirthday().after(referenceDate)) {
-//                iterator.remove();
-//            }
-//        }
 
         return people;
     }
@@ -50,7 +42,7 @@ public class PersonController {
 
         Iterator<Person> iterator = people.iterator();
         while (iterator.hasNext()) {
-            if(iterator.next().getLastName().toLowerCase().startsWith("a")) {
+            if(iterator.next().getLastName().toLowerCase().contains("a")) {
                 iterator.remove();
             }
         }

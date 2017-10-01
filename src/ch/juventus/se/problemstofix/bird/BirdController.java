@@ -1,7 +1,7 @@
 package ch.juventus.se.problemstofix.bird;
 
-import java.util.HashSet;
-import java.util.Set;
+import java.util.ArrayList;
+import java.util.List;
 
 /**
  * @author: Linda Krüger
@@ -9,13 +9,11 @@ import java.util.Set;
  */
 public class BirdController {
 
-    // private List<Bird> birds;
-    private Set<Bird> birds;
+     private List<Bird> birds;
 
-    // solution
-//    public BirdController () {
-//        birds = new HashSet<>();
-//    }
+    public BirdController () {
+        birds = new ArrayList<>();
+    }
 
     public void addBird(Bird bird) {
         birds.add(bird);
